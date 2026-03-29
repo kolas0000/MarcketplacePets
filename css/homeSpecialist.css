@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: #0f172a;
+}
+
+.home {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.homeclient {
+    margin-bottom: 30px;
+}
+
+.CancelHome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.CancelHome img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.CancelHome p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.profileData {
+    margin-bottom: 30px;
+}
+
+.profileData2 {
+    margin-bottom: 30px;
+}
+
+.profileBIO {
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.profileandStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.profile p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0ea5e9;
+}
+
+.status {
+    padding: 6px 16px;
+    border-radius: 30px;
+}
+
+.status p {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.userPhoto {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.photoUser {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #0ea5e9;
+    object-fit: cover;
+}
+
+.editPhoto {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: #0ea5e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid white;
+}
+
+.editPhoto:hover {
+    background: #0284c7;
+    transform: scale(1.1);
+}
+
+.editPhoto img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.profilenameAndreview {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.profilename p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.grade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+.grade img {
+    width: 16px;
+    height: 16px;
+}
+
+.grade p {
+    font-weight: 600;
+    color: #f59e0b;
+    font-size: 15px;
+}
+
+.profilephone p {
+    font-size: 16px;
+    color: #64748b;
+}
+
+.profilephone span {
+    color: #0ea5e9;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.profileAddress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.profileAddress p {
+    font-size: 18px;
+    color: #0ea5e9;
+    font-weight: 600;
+    background: #f0f9ff;
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: 1px solid #bae6fd;
+}
+
+.edit {
+    padding: 12px 32px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.edit:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(14, 165, 233, 0.2);
+}
+
+.applicationsAndHistory {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.applications {
+    background: white;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.applicationsH2 p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.activeOrder {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.ActiveOrderStatus p {
+    font-weight: 600;
+    color: #0ea5e9;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.infoOrder {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.NewOrder p,
+.completedOrder p,
+.atWorkOrder p,
+.canceledOrder p {
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.NewOrder p {
+    background: #f0f9ff;
+    color: #0369a1;
+    border-left: 4px solid #0ea5e9;
+}
+
+.NewOrder p::after {
+    content: "🆕";
+    font-size: 18px;
+    font-weight: 600;
+    color: #0ea5e9;
+}
+
+.completedOrder p {
+    background: #f0fdf4;
+    color: #166534;
+    border-left: 4px solid #4ade80;
+}
+
+.completedOrder p::after {
+    content: "✓✓";
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ade80;
+}
+
+
+.atWorkOrder p {
+    background: #fefce8;
+    color: #854d0e;
+    border-left: 4px solid #facc15;
+}
+
+.atWorkOrder p::after {
+    content: "⌛";
+    font-size: 20px;
+    font-weight: 600;
+    color: #facc15;
+}
+
+.canceledOrder p {
+    background: #fef2f2;
+    color: #991b1b;
+    border-left: 4px solid #f87171;
+}
+
+.canceledOrder p::after {
+    content: "✕";
+    font-size: 18px;
+    font-weight: 600;
+    color: #f87171;
+}
+
+.NewOrder p:hover,
+.completedOrder p:hover,
+.atWorkOrder p:hover,
+.canceledOrder p:hover {
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1024px) {
+    .applicationsAndHistory {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 20px 15px;
+    }
+    
+    .CancelHome {
+        padding: 15px 20px;
+    }
+    
+    .CancelHome p {
+        font-size: 24px;
+    }
+    
+    .profileBIO {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .profilename p {
+        font-size: 20px;
+    }
+    
+    .userPhoto {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .photoUser {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile {
+        gap: 10px;
+    }
+    
+    .status p {
+        font-size: 12px;
+    }
+    
+    .profileAddress p {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    
+    iframe {
+        height: 400px;
+    }
+}

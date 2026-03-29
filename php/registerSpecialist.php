@@ -1,36 +1,43 @@
 <?php
 
  $con = mysqli_connect('127.0.0.1:3306', 'root', '', 'marketplace');
- 
- $name = $_POST['Name'];
 
- $surname = $_POST['Surname'];
+$name = $_POST['Name'];
 
- $middleName = $_POST['MiddleName'];
+$surname = $_POST['Surname'];
 
- $password = $_POST['password_user'];
+$middleName = $_POST['MiddleName'];
 
- $phone = $_POST['phone'];
+$password = password_hash($_POST['password_user'], PASSWORD_BCRYPT);
 
- $email = $_POST['email'];
+$phone = $_POST['phone'];
 
- $specialist = $_POST['special'];
+$email = $_POST['email'];
 
- $expWork = $_POST['Exp'];
+$specialist = $_POST['special'];
 
- $fileWork = $_FILES['fileWork']['tmp_name'];
- $uploude2 = "../sertificate/".$_FILES['fileWork']['name'];
+$expWork = $_POST['Exp'];
 
- move_uploaded_file($fileWork, $uploude2);
+$fileWork = $_FILES['fileWork']['tmp_name'];
+$uploude2 = "../sertificate/" . $_FILES['fileWork']['name'];
 
- $result = mysqli_query($con,'select max(id_user) as maxId from users');
- $row = mysqli_fetch_assoc($result);
- $new_id = ($row['maxId'] + 1);
+move_uploaded_file($fileWork, $uploude2);
 
- mysqli_query($con, "insert into users(id_user, Name, Surname, MiddleName, password_user, phone, email, specialization, experience, img)
+$result = mysqli_query($con, 'select max(id_user) as maxId from users');
+$row = mysqli_fetch_assoc($result);
+$new_id = ($row['maxId'] + 1);
+
+if (mysqli_fetch_array(mysqli_query ($con , "select count(phone) from users where phone = $phone"), MYSQLI_ASSOC ) > 0) {
+    echo ('Пользователь существует с таким номером телефона!');
+} else if (mysqli_fetch_array(mysqli_query ($con , "select count(phone) from users where email = $email"), MYSQLI_ASSOC ) > 0) {
+ echo ('Пользователь существует с такой почтой!');
+} else {
+
+mysqli_query($con, "insert into users(id_user, Name, Surname, MiddleName, password_user, phone, email, specialization, experience, img, id_role, status_specialist)
  values (
- $new_id, '$name', '$surname', '$middleName', '$password', '$phone', '$email', $specialist, $expWork, '$uploude2')");
+ $new_id, '$name', '$surname', '$middleName', '$password', '$phone', '$email', $specialist, $expWork, '$uploude2', 2, 'В подтверждении')");
 
- header("Location: /RegisterSpecialist.php");
- exit();
+header("Location: /loginSPECIALIST.php");
+exit();
+}
 ?>

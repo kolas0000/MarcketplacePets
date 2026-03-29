@@ -6,18 +6,20 @@ if(isset($_POST['phone']) && isset($_POST['password'])){
     $user_phone = htmlspecialchars($_POST['phone']);
     $user_password = htmlspecialchars($_POST['password']);
 
+
+
     $sql = "select * from users where phone = '$user_phone'";
     if($result = mysqli_query($con ,$sql)){
         $t=mysqli_num_rows($result);
         if($t > 0){
             foreach($result as $item){
-            // print_r($item);
             if($item['phone'] == $user_phone && password_verify($user_password, $item['password_user'])){
             $_SESSION['user_id'] = $item['id_user'];
             $_SESSION['phone'] = $item['phone'];
             $_SESSION['user_name'] = $item['Name'].$item['Surname'].$item['MiddleName'];
-            $_SESSION['role'] = 1;
-            header('Location: index.php');
+            $_SESSION['role'] = 2;
+            header('Location: /index.php');
+            exit();
         }
       } 
   } 
@@ -31,6 +33,8 @@ if(isset($_SESSION['user_id'])){
  echo "123";
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,13 +54,14 @@ if(isset($_SESSION['user_id'])){
             <p>Вход</p>
         </div>
         <form class="forms" action="" method="post">
-            <input class="login" type="phone" placeholder="Введите свой номер телефона" name="phone">
-            <input class="login" type="text" placeholder="Введите пароль" name="password">
+            <input class="login" type="text" name="phone" placeholder="Введите свой номер телефона">
+            <input class="login" type="text" name="password" placeholder="Введите пароль">
             <div class="btntwo">
             <input type="submit" class="login1" id="getCode" value="Войти">
-            <a class="login2" href="RegisterClient.html">Зарегистрироваться</a>
+            <a class="login2" href="RegisterSpecialist.php">Зарегистрироваться</a>
             </div>
         </form>
+       
         <!-- <div class="gettingTheCode" id="gettingTheCode">
             <div class="Code" id="Code">
                 <p>На ваше устройство был отправлен
@@ -70,6 +75,6 @@ if(isset($_SESSION['user_id'])){
         </div> -->
     </div>
 </body>
-<script src="getcode.js"></script>
+<script src="getcodeSpecialis.js"></script>
 
 </html>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: #0f172a;
+}
+
+.home {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+.homeclient {
+    margin-bottom: 30px;
+}
+
+.CancelHome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.CancelHome img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.CancelHome p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+
+.createApplication {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.labels {
+    margin-top: 10px;
+}
+
+.labels:first-of-type {
+    margin-top: 0;
+}
+
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+}
+
+input[type="number"]::placeholder,
+input[type="text"]::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 18px 18px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+input[type="submit"]:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -10px rgba(14, 165, 233, 0.4);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+.createApplication {
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+label[for="grade"]::after,
+label[for="comm"]::after,
+label[for="service"]::after {
+    content: "*";
+    color: #0ea5e9;
+    font-weight: 600;
+}
+
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #f87171;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #4ade80;
+}

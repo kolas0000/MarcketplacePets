@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.register img {
+    width: 30px;
+    height: 30px;
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(176deg) brightness(101%) contrast(101%);
+}
+
+.register p {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.forms input[type="text"], .forms input[type="email"],
+.forms input[type="password"], .forms input[type="phone"], .forms select, .forms input[type="number"] {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.forms select {
+    appearance: none;
+    
+}
+
+.forms input[type="text"]:focus, .forms input[type="email"]:focus,
+.forms input[type="password"]:focus,.forms input[type="phone"]:focus, .forms select:focus, .forms input[type="number"]:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+}
+
+.forms input[type="text"]::placeholder, .forms input[type="email"]::placeholder,
+.forms input[type="password"]::placeholder, .forms input[type="phone"]::placeholder, .forms select::placeholder, .forms input[type="number"]::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.forms input[type="submit"], .login2 {
+    width: 100%;
+    padding: 16px 18px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+.forms input[type="submit"]:hover, .login2:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -10px rgba(14, 165, 233, 0.4);
+}
+
+.forms input[type="submit"]:active, .login2:active {
+    transform: translateY(0);
+}
+
+.btntwo {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms input[type="file"][name="fileWork"] {
+    width: 100%;
+    padding: 12px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    cursor: pointer;
+}
+
+.forms input[type="file"][name="fileWork"]:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+}
+
+.forms input[type="file"][name="fileWork"]::file-selector-button {
+    padding: 8px 16px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.forms input[type="file"][name="fileWork"]::file-selector-button:hover {
+    background: #0284c7;
+}

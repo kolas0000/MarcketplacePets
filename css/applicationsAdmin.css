@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: #0f172a;
+}
+
+.home {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.homeclient {
+    margin-bottom: 30px;
+}
+
+.CancelHome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.CancelHome img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.CancelHome p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.applications {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e2e8f0;
+    overflow-x: auto;
+}
+
+form {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+thead {
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+th {
+    text-align: left;
+    padding: 18px 16px;
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+th:first-child {
+    border-top-left-radius: 12px;
+}
+
+th:last-child {
+    border-top-right-radius: 12px;
+}
+
+td {
+    padding: 18px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #0f172a;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+select:hover {
+    border-color: #0ea5e9;
+    background-color: #f8fafc;
+}
+
+select:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+option {
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+    color: #0f172a;
+}
+
+td a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+td a[download] {
+    color: #0ea5e9;
+    padding: 8px 16px;
+    background: #f0f9ff;
+    border-radius: 30px;
+    font-size: 14px;
+    border: 1px solid #bae6fd;
+    white-space: nowrap;
+}
+
+td a[download]:hover {
+    background: #e0f2fe;
+    color: #0284c7;
+    transform: translateY(-1px);
+}
+
+td:last-child {
+    white-space: nowrap;
+}
+
+td:last-child a {
+    margin: 0 5px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td a[href*="accept"] {
+    color: white;
+    background: #0ea5e9;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
+}
+
+td a[href*="accept"]:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px -3px rgba(14, 165, 233, 0.3);
+}
+
+td a[href*="Cancel"] {
+    color: #0f172a;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+}
+
+td a[href*="Cancel"]:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+td:nth-child(4) {
+    color: #0ea5e9;
+    font-weight: 500;
+}
+
+td:last-child select {
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+    color: #0369a1;
+    font-weight: 500;
+}
+
+td:last-child select:hover {
+    background-color: #e0f2fe;
+}
+
+@media (max-width: 1024px) {
+    .applications {
+        padding: 20px;
+    }
+    
+    th, td {
+        padding: 14px 10px;
+        font-size: 13px;
+    }
+    
+    td a, select {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+    }
+    
+    select {
+        padding: 8px 28px 8px 12px !important;
+    }
+}

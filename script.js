@@ -1,5 +1,3 @@
-
-const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const OpenWhoyou = document.getElementById('clickme');
 const howyou = document.getElementById('Whoyou');
@@ -7,9 +5,6 @@ const overlay = document.getElementById('overlay');
 const ExitWhoyou = document.getElementById('ExitWhoyou');
 const specialistsBlock = document.getElementById('specialistsBlock');
 
-burger.addEventListener('click', function() {
-    menu.classList.toggle('active');
-});
 
 OpenWhoyou.addEventListener('click', function() {
    howyou.classList.toggle("WhoyouActive");
