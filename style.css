@@ -1,0 +1,454 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* HEADER */
+
+.header{
+    width:100%;
+    background:linear-gradient(135deg,#4da3ff,#6bd3ff);
+    padding-bottom:60px;
+}
+
+.navigation{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    width:120px;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    opacity:0.7;
+}
+
+.logoutBtn{
+    padding:8px 16px;
+    border:none;
+    background:#ff4d4d;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.logoutBtn:hover{
+    background:#e13a3a;
+}
+
+/* BURGER */
+
+.burger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+}
+
+.burger span{
+    width:25px;
+    height:3px;
+    background:white;
+}
+
+/* HERO */
+
+.hero{
+    width:90%;
+    margin:auto;
+    margin-top:40px;
+}
+
+.reliablePartnerAndDog{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.reliablePartner p{
+    font-size:36px;
+    color:white;
+    font-weight:bold;
+}
+
+.dog{
+    width:300px;
+}
+
+/* MODAL */
+
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    z-index:5;
+}
+
+.center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.Whoyou{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    display:none;
+    flex-direction:column;
+    gap:15px;
+    z-index:10;
+}
+
+.Whoyou h2{
+    margin-bottom:10px;
+}
+
+.Whoyou a{
+    display:block;
+    padding:10px;
+    background:#4da3ff;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.Whoyou a:hover{
+    background:#3a8be0;
+}
+
+#ExitWhoyou{
+    background:#ccc;
+    color:#333;
+}
+
+/* ABOUT PROJECT */
+
+.information{
+    width:90%;
+    margin:80px auto;
+}
+
+.aboutTheProject{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.CatAndProject{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.CatAndBlock{
+    position:relative;
+}
+
+.backgroundCat{
+    width:200px;
+}
+
+.cat{
+    position:absolute;
+    width:150px;
+    top:20px;
+    left:25px;
+}
+
+.CatAndProject p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* SPECIALISTS */
+
+.specialists{
+    width:90%;
+    margin:auto;
+}
+
+.specialistsInfo{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.specialistsBlock{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.specialistOne{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.specialistOne:hover{
+    transform:translateY(-5px);
+}
+
+.specialistOne img{
+    width:120px;
+    margin-bottom:10px;
+}
+
+.specialistOne p{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.specialistOne span{
+    color:gray;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:80px;
+    background:#2c2c2c;
+    color:white;
+    text-align:center;
+    padding:30px 0;
+}
+
+.footer span{
+    color:#6bd3ff;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.reliablePartnerAndDog{
+    flex-direction:column;
+    text-align:center;
+}
+
+.dog{
+    margin-top:20px;
+}
+
+.CatAndProject{
+    flex-direction:column;
+}
+
+.menu{
+    display:none;
+}
+
+.burger{
+    display:flex;
+}
+
+}
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    z-index:5;
+    display:none;
+}
+
+/* Центрирование окна */
+
+.center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Само модальное окно */
+
+.Whoyou{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:320px;
+    background:white;
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    z-index:10;
+    display:none;
+    animation: modalOpen 0.35s ease;
+}
+
+/* Заголовок */
+
+.Whoyou h2{
+    margin-bottom:25px;
+    font-size:26px;
+    color:#333;
+}
+
+/* Кнопки выбора */
+
+.Whoyou a{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.25s;
+}
+
+/* Клиент */
+
+#btnClient{
+    background:#4da3ff;
+    color:white;
+}
+
+#btnClient:hover{
+    background:#3b8de0;
+}
+
+/* Специалист */
+
+#btnSpecialist{
+    background:#6bd3ff;
+    color:white;
+}
+
+#btnSpecialist:hover{
+    background:#4fc3ef;
+}
+
+/* Администратор */
+
+#btnAdmin{
+    background:#7c7cff;
+    color:white;
+}
+
+#btnAdmin:hover{
+    background:#6565e8;
+}
+
+/* Кнопка отмены */
+
+#ExitWhoyou{
+    background:#eeeeee;
+    color:#333;
+}
+
+#ExitWhoyou:hover{
+    background:#dddddd;
+}
+
+/* Декоративные лапки */
+
+.lapki{
+    position:absolute;
+    top:-25px;
+    left:-20px;
+}
+
+.lapki img{
+    width:60px;
+}
+
+.lapki2{
+    position:absolute;
+    bottom:-25px;
+    right:-20px;
+}
+
+.lapki2 img{
+    width:60px;
+}
+
+/* Анимация появления */
+
+@keyframes modalOpen{
+    from{
+        opacity:0;
+        transform:translate(-50%,-60%);
+    }
+    to{
+        opacity:1;
+        transform:translate(-50%,-50%);
+    }
+}
+
+.overlayActive{
+    display:block;
+}
+
+/* ОТКРЫТОЕ МОДАЛЬНОЕ ОКНО */
+
+.WhoyouActive{
+    display:flex;
+}
+
+/* БУРГЕР МЕНЮ ДЛЯ МОБИЛКИ */
+
+.menu.active{
+    position:absolute;
+    top:80px;
+    right:0;
+    background:white;
+    width:220px;
+    flex-direction:column;
+    padding:20px;
+    border-radius:10px 0 0 10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    display:flex;
+}
+
+.menu.active li{
+    margin:10px 0;
+}
+
+.menu.active a{
+    color:#333;
+}

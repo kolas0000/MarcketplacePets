@@ -1,0 +1,150 @@
+
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="overlay" id="overlay"></div>
+    <?php 
+    if(!empty($_SESSION)){ ?>
+         <div class="header">
+        <div class="navigation">
+            <img class="logo" src="photo/Group 2.png">
+            <ul class="menu">
+                <li><a href="#">О проекте</a></li>
+                <form action="" method="post">
+                <input class="logoutBtn" type="submit" name="logout_btn" value="Выйти">
+                </form>
+                <li><a href="#">Специалисты</a></li>
+                <a href="#" id="clickme"><li>Личный кабинет</li></a>
+            </ul>
+
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <div class="hero">
+            <div class="reliablePartnerAndDog">
+                <div class="reliablePartner">
+                    <p>Ваш надежный партнёр в заботе <br>
+                        о ваших любимых питомцев!</p>
+                </div>
+                <img class="dog" src="photo/8630607 1.png">
+            </div>
+        </div>
+    </div>
+  <?php  } ?> 
+   <?php 
+    if(isset($_POST['logout_btn'])){
+        session_destroy();
+        header("Location: index.php");
+    } else if(empty($_SESSION["user_id"])) { ?>
+        <div class="header">
+        <div class="navigation">
+            <img class="logo" src="photo/Group 2.png">
+            <ul class="menu">
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#">Специалисты</a></li>
+                <a href="#" id="clickme"><li>Вход в личный кабинет</li></a>
+            </ul>
+
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <div class="hero">
+            <div class="reliablePartnerAndDog">
+                <div class="reliablePartner">
+                    <p>Ваш надежный партнёр в заботе <br>
+                        о ваших любимых питомцев!</p>
+                </div>
+                <img class="dog" src="photo/8630607 1.png">
+            </div>
+        </div>
+    </div>
+   <?php }
+    ?>
+    <div class="center">
+    <div class="Whoyou" id="Whoyou">
+        <div class="lapki">
+        <img src="photo/Group 92.png">
+        </div>
+        <h2>Кто вы?</h2>
+        <a href="loginCLIENT.php" id="btnClient">Клиент</a>
+        <a href="loginSPECIALIST.html" id="btnSpecialist">Специалист</a>
+        <a href="LoginADMIN.html" id="btnAdmin">Администратор</a>
+        <a id="ExitWhoyou">Отмена</a>
+         <div class="lapki2">
+        <img src="photo/Group 93.png">
+        </div>
+         </div>
+          </div>
+
+    <div class="information">
+        <div class="aboutTheProject">
+            <p>О проекте</p>
+        </div>
+        <div class="CatAndProject">
+            <div class="CatAndBlock">
+                <img class="backgroundCat" src="photo/Group 91.png">
+                <img class="cat" src="photo/289143a5-1a28-4c1d-b508-e7e6cce8977e (1) 1.png">
+            </div>
+            <p>Ваша надежная платформа для заботы о питомцах! Мы создали удобный и безопасный сервис для хозяев
+                животных, чтобы вы могли легко найти профессиональных специалистов, готовых помочь с выгулом, уходом и
+                другими важными делами, когда у вас нет возможности сделать это самостоятельно.
+                Заботьтесь о своих питомцах с уверенностью — мы здесь, чтобы сделать заботу о них проще и приятнее!</p>
+        </div>
+    </div>
+
+    <div class="specialists">
+        <div class="specialistsInfo">
+            <p>Специалисты</p>
+        </div>
+        <div class="specialistsBlock" id="specialistsBlock">
+            <div class="specialistOne">
+                <img src="photo/Mask group.png">
+                <p>Максимова Виктория</p>
+                <span>10 лет опыта работы</span>
+            </div>
+              <div class="specialistOne">
+                <img src="photo/Mask group (1).png">
+                <p>Таджикистанов Руслан</p>
+                <span>7 лет опыта работы</span>
+            </div>
+              <div class="specialistOne">
+                <img src="photo/Mask group (2).png">
+                <p>Бигмаков Михаил</p>
+                <span>3 года опыта работы</span>
+            </div>
+              <div class="specialistOne">
+                <img src="photo/Mask group (3).png">
+                <p>Тиунова Вилена</p>
+                <span>9 лет опыта работы</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Свяжитесь с нами через нашу почту!</p>
+        <span>BypPets@gmail.com</span>
+        <p>2022 (с) — Все права защищены.</p>
+    </div>
+    <a href="ff.html">123</a>
+    <a href="RegisterClient.html">123</a>
+    <a href="homeAdmini.html">1234</a>
+   
+</body>
+<script src="script.js"></script>
+
+</html>
